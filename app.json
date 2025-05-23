@@ -14,9 +14,19 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#26252a"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.autoattendance-app"
+    },
+    "androidNavigationBar": {
+      "visible": "sticky-immersive",
+      "barStyle": "dark-content",
+      "backgroundColor": "#000000"
     },
     "web": {
       "bundler": "metro",
@@ -33,10 +43,22 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "a4f4da79-0616-41c8-a2b5-f00d983a702e"
+      }
     }
   }
 }
